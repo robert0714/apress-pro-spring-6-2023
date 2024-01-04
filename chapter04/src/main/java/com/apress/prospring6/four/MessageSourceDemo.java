@@ -59,7 +59,8 @@ public class MessageSourceDemo {
         var ctx = new AnnotationConfigApplicationContext(MessageSourceConfig.class);
 
         Locale english = Locale.ENGLISH;
-        Locale ukrainian = Locale.of("uk", "UA");
+        //  Locale ukrainian = Locale.of("uk", "UA");
+        Locale ukrainian = new Locale("uk", "UA");
         LOGGER.info(ctx.getMessage("msg", null, english));
         LOGGER.info(ctx.getMessage("msg", null, ukrainian));
         LOGGER.info(ctx.getMessage("nameMsg", new Object[]{ "Iuliana", "Cosmina" }, english));

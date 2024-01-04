@@ -16,50 +16,50 @@
         published by Apress in order to learn and practice Spring. </description>
 
     <properties>
-        <spring-boot.version>3.1.1</spring-boot.version>
+        <spring-boot.version>3.1.7</spring-boot.version>
 
         <!-- Java version for non-Boot projects -->
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <!--  Java version for Boot projects-->
-        <java.version>19</java.version>
+        <java.version>17</java.version>
 
-        <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
-        <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
-        <docker-maven-plugin.version>0.43.0</docker-maven-plugin.version>
-        <versions-maven-plugin.version>2.16.0</versions-maven-plugin.version>
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
-        <maven-shade-plugin.version>3.5.0</maven-shade-plugin.version>
-        <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+        <build-helper-maven-plugin.version>3.5.0</build-helper-maven-plugin.version>
+        <exec-maven-plugin.version>3.1.1</exec-maven-plugin.version>
+        <docker-maven-plugin.version>0.43.4</docker-maven-plugin.version>
+        <versions-maven-plugin.version>2.16.2</versions-maven-plugin.version>
+        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
+        <maven-shade-plugin.version>3.5.1</maven-shade-plugin.version>
+        <maven-surefire-plugin.version>3.2.3</maven-surefire-plugin.version>
         <jupiter.version>5.9.3</jupiter.version>
         <kotlin.version>1.8.22</kotlin.version>
 
         <servletApi.version>6.0.0</servletApi.version>
-        <thymeleaf.version>3.1.1.RELEASE</thymeleaf.version>
+        <thymeleaf.version>3.1.2.RELEASE</thymeleaf.version>
 
         <!-- utils -->
-        <jackson.version>2.15.2</jackson.version>
-        <commons-lang3.version>3.12.0</commons-lang3.version>
-        <lombok.version>1.18.28</lombok.version>
-        <mockito.version>2.0.2-beta</mockito.version>
+        <jackson.version>2.15.3</jackson.version>
+        <commons-lang3.version>3.14.0</commons-lang3.version>
+        <lombok.version>1.18.30</lombok.version>
+        <mockito.version>5.8.0</mockito.version>
         <testcontainers.version>1.18.3</testcontainers.version>
         <jakarta.annotation.version>2.1.0</jakarta.annotation.version>
         <jakarta.injectApi.version>2.0.1</jakarta.injectApi.version>
         <groovy.version>3.0.11</groovy.version>
         <commons.dbcp2.version>2.9.0</commons.dbcp2.version>
-        <mariadb.client.version>3.1.4</mariadb.client.version>
+        <mariadb.client.version>3.3.2</mariadb.client.version>
         <hikari.version>5.0.1</hikari.version>
         <hibernate.version>6.2.6.Final</hibernate.version>
         <hibernate.validator.version>8.0.1.Final</hibernate.validator.version>
         <mongo.driver.version>4.9.1</mongo.driver.version>
 
-        <spring-native.version>0.9.19</spring-native.version>
+        <spring-native.version>0.9.28</spring-native.version>
         <tomcat.version>10.1.5</tomcat.version>
 
         <!-- others -->
         <restAssured.version>5.3.0</restAssured.version>
         <h2.version>2.1.214</h2.version>
-        <jooq.version>3.18.5</jooq.version>
+        <jooq.version>3.18.8</jooq.version>
         <aspectj.version>1.9.9.1</aspectj.version>
         <logback.version>1.4.8</logback.version>
         <slf4j.version>2.0.7</slf4j.version>
@@ -181,6 +181,12 @@
                     </dependencies>
                     <configuration>
                         <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+                        <parallel>all</parallel>
+                        <threadCount>10</threadCount>
+                        <threadCountSuites>2</threadCountSuites>
+                        <threadCountClasses>2</threadCountClasses>
+                        <threadCountMethods>6</threadCountMethods>
+                        <perCoreThreadCount>true</perCoreThreadCount>
                     </configuration>
                 </plugin>
                 <plugin>

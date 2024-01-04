@@ -80,8 +80,8 @@
                             <executable>docker</executable>
                             <workingDirectory>${project.basedir}/docker-build</workingDirectory>
                             <arguments>
-                                <argument>build</argument>
-                                <argument>-t</argument>
+                                                                <argument>build</argument>
+                                                                <argument>-t</argument>
                                 <argument>prospring6-mariadb:1.1</argument>
                                 <argument>.</argument>
                             </arguments>
@@ -100,13 +100,16 @@
                             <name>prospring6-mariadb:1.1</name>
                             <alias>mariadb-jooq-database</alias>
                             <run>
-                                <ports>
+                                <network>
+                                    <mode>host</mode>
+                                </network>
+                                <!-- <ports>
                                     <port>3306:3306</port>
-                                </ports>
+                                </ports> -->
                                 <wait>
                                     <!--  this is needed because even if the container is up, it takes a while for the DB to be accessible -->
                                     <tcp>
-                                        <host>0.0.0.0</host>
+                                        <!-- <host>0.0.0.0</host> -->
                                         <ports>
                                             <port>3306</port>
                                         </ports>

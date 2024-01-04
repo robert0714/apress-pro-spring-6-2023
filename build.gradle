@@ -13,7 +13,7 @@ buildscript {
     dependencies {
         classpath 'io.spring.gradle:dependency-management-plugin:1.1.1'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.42.0' // https://github.com/ben-manes/gradle-versions-plugin/
-        classpath 'org.springframework.boot:spring-boot-gradle-plugin:3.1.1'
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:3.1.7'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22'  // kotlin version
         classpath 'org.jetbrains.kotlin:kotlin-allopen:1.8.22'
         classpath 'org.jetbrains.kotlin:kotlin-noarg:1.8.22'
@@ -25,27 +25,27 @@ buildscript {
 ext {
     bootProjects = subprojects.findAll { ( it.name.endsWith('-boot')) }
 
-    lang3Version = "3.12.0"
-    mockitoVersion = "2.0.2-beta"
+    lang3Version = "3.14.0"
+    mockitoVersion = "5.8.0"
     testcontainersVersion = "1.18.3"
     jakartaAnnotationVersion = "2.1.0"
     jakartaInjectApiVersion = "2.0.1"
     groovyVersion = "3.0.11"
     dbcp2Version = "2.9.0"
-    mariadbClientVersion = "3.1.4"
+    mariadbClientVersion = "3.3.2"
     hikariVersion = "5.0.1"
     hibernateVersion = "6.2.6.Final"
     hibernateValidatorVersion = "8.0.1.Final"
-    mongoVersion ="4.9.1"
+    mongoVersion ="4.11.1"
     h2Version = "2.1.214"
-    jooqVersion = "3.18.5"
+    jooqVersion = "3.18.8"
     aspectjVersion = "1.9.9.1"
     logbackVersion = "1.4.8"
     slf4jVersion = "2.0.7"
-    lombokVersion = "1.18.28"
-    jacksonVersion = "2.15.2"
+    lombokVersion = "1.18.30"
+    jacksonVersion = "2.15.3"
 
-    thymeleafVersion = "3.1.1.RELEASE"
+    thymeleafVersion = "3.1.2.RELEASE"
     servletApiVersion="6.0.0"
     restAssuredVersion="5.3.0"
 }
@@ -86,14 +86,14 @@ configure(allprojects) { project ->
              "-Xlint:-deprecation", "-Xlint:-unchecked"]
 
     compileJava {
-        sourceCompatibility = JavaVersion.VERSION_19
-        targetCompatibility = JavaVersion.VERSION_19
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
         options.encoding = "UTF-8"
     }
 
     compileTestJava {
-        sourceCompatibility = JavaVersion.VERSION_19
-        targetCompatibility = JavaVersion.VERSION_19
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
         options.encoding = "UTF-8"
         options.compilerArgs += "-parameters"
     }

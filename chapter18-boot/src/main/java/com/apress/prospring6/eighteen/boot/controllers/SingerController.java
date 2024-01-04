@@ -34,7 +34,8 @@ public class SingerController {
         if (singer != null) {
             int msec = 10;
             try {
-                Thread.sleep(Duration.ofMillis(msec * id));
+                //Thread.sleep(Duration.ofMillis(msec * id));
+                Thread.sleep(Duration.ofMillis(msec * id).toSeconds());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
