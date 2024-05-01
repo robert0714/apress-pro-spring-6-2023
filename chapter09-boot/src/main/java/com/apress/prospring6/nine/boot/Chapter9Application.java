@@ -45,6 +45,7 @@ public class Chapter9Application {
     private static final Logger LOGGER = LoggerFactory.getLogger(Chapter9Application.class);
 
     public static void main(String... args) {
+    	 
         System.setProperty(AbstractEnvironment.ACTIVE_PROFILES_PROPERTY_NAME, "dev");
         var ctx = SpringApplication.run(Chapter9Application.class, args);
 

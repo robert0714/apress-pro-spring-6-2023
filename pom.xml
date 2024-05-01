@@ -16,7 +16,7 @@
         published by Apress in order to learn and practice Spring. </description>
 
     <properties>
-        <spring-boot.version>3.1.7</spring-boot.version>
+        <spring-boot.version>3.2.5</spring-boot.version>
 
         <!-- Java version for non-Boot projects -->
         <maven.compiler.source>17</maven.compiler.source>
@@ -47,8 +47,8 @@
         <jakarta.injectApi.version>2.0.1</jakarta.injectApi.version>
         <groovy.version>3.0.11</groovy.version>
         <commons.dbcp2.version>2.9.0</commons.dbcp2.version>
-        <mariadb.client.version>3.3.2</mariadb.client.version>
-        <hikari.version>5.0.1</hikari.version>
+        <mariadb.client.version>3.3.3</mariadb.client.version>
+        <hikari.version>5.1.0</hikari.version>
         <hibernate.version>6.2.6.Final</hibernate.version>
         <hibernate.validator.version>8.0.1.Final</hibernate.validator.version>
         <mongo.driver.version>4.9.1</mongo.driver.version>
@@ -62,7 +62,7 @@
         <jooq.version>3.18.8</jooq.version>
         <aspectj.version>1.9.9.1</aspectj.version>
         <logback.version>1.4.8</logback.version>
-        <slf4j.version>2.0.7</slf4j.version>
+        <slf4j.version>2.0.13</slf4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
