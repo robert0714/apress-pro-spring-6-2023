@@ -57,7 +57,12 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @Testcontainers
 @SqlMergeMode(SqlMergeMode.MergeMode.MERGE)
 @Sql({ "classpath:testcontainers/drop-schema.sql", "classpath:testcontainers/create-schema.sql" })
-@SpringBootTest(classes = {Chapter9Application.class})
+@SpringBootTest(classes = {Chapter9Application.class},
+                properties = { 
+                   "logging.level.org.springframework.orm.jpa=DEBUG",
+                   "logging.level.org.springframework.transaction=DEBUG",
+                 }
+                )
 public class Chapter9ApplicationTest {
 
     @Autowired
